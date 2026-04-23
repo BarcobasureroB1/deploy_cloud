@@ -10,7 +10,7 @@ app = FastAPI(title="Deploy Cloud", version="1.0.0")
 
 class PostInput(BaseModel):
     nombre: str = Field(min_length=1, example="Juan")
-    edad: int = Field(ge=0, example=30)
+    edad: int = Field(gt=0, example=30)
     numero: float = Field(gt=0, example=3.14)
 
 class PostOutput(BaseModel):
